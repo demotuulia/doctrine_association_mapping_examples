@@ -1,0 +1,66 @@
+
+////////////////////////////////////////////////
+//
+// Script to genearate databaase diagram
+//
+//
+// Docs: https://dbml.dbdiagram.io/docs
+//
+//
+////////////////////////////////////////////////
+
+table user {
+    id integer [primary key]
+    name  varchar
+}
+
+table phone_number {
+    id integer [primary key]
+    number  varchar
+}
+
+table user_phone_number {
+    phone_number_id integer 
+    user_id  integer
+}
+
+
+
+Ref: user.id <> user_phone_number.user_id
+Ref: phone_number.id <> user_phone_number.phone_number_id
+
+
+
+
+table cart {
+    id integer [primary key]
+    customer_id integer
+    number  varchar
+}
+
+table customer {
+    id integer [primary key]
+    name  varchar
+}
+Ref: customer.id - cart.customer_id
+
+table feature {
+    id integer [primary key]
+    product_id integer
+    name  varchar
+}
+
+table product {
+    id integer [primary key]
+    number  varchar
+}
+
+Ref: product.id < feature.product_id
+
+
+table category {
+    id integer [primary key]
+    name  varchar
+    parent_id integer
+}
+Ref: category.id < category.parent_id
