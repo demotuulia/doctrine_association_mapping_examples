@@ -20,7 +20,7 @@
 
 This is an framework with full working Doctrine Map Association examples.
 There is more explanation about this on my Medium page
-TODO:ADD LINK.
+[https://medium.com/@tantonius/doctrine-association-mapping-examples-54e69b87579e](https://medium.com/@tantonius/doctrine-association-mapping-examples-54e69b87579e).
 
 There are examples for the associations below.
 
