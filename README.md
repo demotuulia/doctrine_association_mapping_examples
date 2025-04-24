@@ -1,5 +1,5 @@
-<img src="/img/doctrine.png" width="262">
-TODO: ADD doctrine.png
+<img src="/img/doctrine.png" width="150">
+
 
 # Doctrine Association Mapping Examples
 
@@ -7,7 +7,6 @@ TODO: ADD doctrine.png
 
 * [Introduction](#intro-section)
 * [Asscociations](#associations-section)
-
   * [OneToOne](#one-to-one-section)
   * [OneToMany](#one-to-many-section)
   * [ManyToMany](#many-to-many-section)
@@ -21,7 +20,7 @@ TODO: ADD doctrine.png
 
 This is an framework with full working Doctrine Map Association examples.
 There is more explanation about this on my Medium page
-TODO:ADD LINK.
+[https://medium.com/@tantonius/doctrine-association-mapping-examples-54e69b87579e](https://medium.com/@tantonius/doctrine-association-mapping-examples-54e69b87579e).
 
 There are examples for the associations below.
 
@@ -38,7 +37,8 @@ See te instructions in the section "Install"
 ## Associations
 
 This examples have been built in a light Php framework.
-The most important folders are
+The most important folders are below in the table. You can find them
+there.
 
 
 | **Folder** | **Description**                            |
@@ -52,33 +52,54 @@ Below are the entities and tests of each association.
 
 ### OneToOne
 
-Entities
+#### Entities
+Customer:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Customer.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Customer.php)\
+Cart:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Cart.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Cart.php)
 
-Test and Example
+#### Test and Example
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/OneToOneTest.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/OneToOneTest.php)
 
 <a name='one-to-many-section'></a>
 
 ### OneToMany
 
-Entities
+#### Entities
+Product:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Product.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Product.php)\
+Feature:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Feature.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Feature.php)
 
-Test and Example
+#### Test and Example
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/OneToManyTest.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/OneToManyTest.php)
 
 <a name='many-to-many-section'></a>
 
-### manyToOne
+### manyToMany
 
-Entities
+#### Entities
+User:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/User.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/User.php)\
+PhoneNumber:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/PhoneNumber.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/PhoneNumber.php)
 
-Test and Example
+#### Test and Example
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/ManyToManyTest.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/ManyToManyTest.php)
+
+
 
 <a name='one-to-many-sr-section'></a>
 
 ### OneToMany Self Referencing
 
-Entities
+#### Entities
+Category:
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Category.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/App/Entity/Category.php)\
 
-Test and Example
+
+#### Test and Example
+[https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/OneToManySelfReferencingTest.php](https://github.com/demotuulia/doctrine_association_mapping_examples/blob/main/Tests/OneToManySelfReferencingTest.php)
 
 <a name='install-section'></a>
 
@@ -86,8 +107,10 @@ Test and Example
 
 ## Clone the Repo
 
-Clone this repo from
-TODO
+Clone this repo by 
+```
+git clone https://github.com/demotuulia/doctrine_association_mapping_examples.git
+```
 
 ## Create containers
 
