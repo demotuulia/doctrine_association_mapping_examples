@@ -81,4 +81,12 @@ class User
     {
         return $this->phoneNumbers->toArray();
     }
+
+    /**
+     * Add phone number
+     */
+    public function addPhoneNumber(PhoneNumber $phoneNumber){
+        $phoneNumber->addUser($this);
+        $this->phoneNumbers->add($phoneNumber);
+    }
 }
