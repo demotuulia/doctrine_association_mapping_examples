@@ -33,6 +33,11 @@ class ManyToManyTest extends BaseTest
         $this->doctrineEm->persist($phoneNumber2);
         $this->doctrineEm->flush();
 
+        $phoneNumber3 = new PhoneNumber();
+        $phoneNumber3->setNumber('33333');
+        $this->doctrineEm->persist($phoneNumber3);
+        $this->doctrineEm->flush();
+
         //
         // Insert users with phone numbers
         //
@@ -57,6 +62,23 @@ class ManyToManyTest extends BaseTest
             var_dump($phoneNumber->getNumber()); // prints "11111", "22222"
         }
 
+        //
+        // Add phone number 3 to user 1
+        //
+        $userDb->addPhoneNumber($phoneNumber3);
+        $this->doctrineEm->persist($userDb);
+        $this->doctrineEm->flush();
+
+        //
+        // Get user 1 again from the database
+        //
+        unset($userDb );
+        $userDb = current($userRepository->findBy(['name' => 'user1']));
+        $phoneNumbers = $userDb->getPhoneNumbers();
+        foreach ($phoneNumbers as $phoneNumber) {
+            var_dump($phoneNumber->getNumber()); // prints "11111", "22222", "33333"
+        }
+      
         //
         // Get phone number '22222' and print its users
         //
